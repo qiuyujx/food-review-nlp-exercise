@@ -180,5 +180,5 @@ def make_prediction(q_text, model_name):
     probability = prob_dist.prob(target)
     
     # Show result
-    print('This review is classified as %s, with probability %f.' % tg_dict[target], probability)
+    print('\nThis review is classified as **%s**, with probability %f.' % (tg_dict[target], probability))
     

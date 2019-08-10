@@ -1,6 +1,6 @@
 import os
 import click
-from food_senti import train_model, make_prediction
+from .foodrw_func import train_model, make_prediction
 
 # Constants
 model_dir = '.\\model\\'
