@@ -5,7 +5,7 @@ __version__ = '0.1.0'
 
 import os
 import click
-from foodrw_func import train_model, make_prediction
+from .foodrw_func import train_model, make_prediction
 
 # Constants
 model_dir = '.\\model\\'

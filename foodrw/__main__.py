@@ -1,4 +1,4 @@
 '''foodrw.__main__: executed when foodrw starts'''
 
-from foodrw import main
+from foodrw.foodrw import main
 main()
