@@ -160,7 +160,7 @@ def train_model(tr_file, model_name):
         for w in all_words:
             wd_writer.write('%s\n' % w)
     
-    print(time()+'All done. You can use "python main.py -m %s -q <review>" option to classify reviews now.' % model_name)
+    print(time()+'All done. You can use "python foodrw -m %s -q <review>" option to classify reviews now.' % model_name)
 
 
 def make_prediction(q_text, model_name):
