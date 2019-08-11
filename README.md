@@ -5,7 +5,7 @@ This is an exercise for sentiment analysis based on python-nltk.
 
 # Installation
 
-** Requirements: Python >= v3.6
+**Requirements: Python >= v3.6**
 
 Check this repo
 
