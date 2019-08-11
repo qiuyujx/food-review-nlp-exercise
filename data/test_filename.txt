@@ -1,0 +1,41 @@
+review	target	target desc	probabilityThere was a warm feeling with the service and I felt like their guest for a special treat.	0	Negative	0.899175
+An extensive menu provides lots of options for breakfast.	1	Positive	0.927278
+I always order from the vegetarian menu during dinner, which has a wide array of options to choose from.	1	Positive	0.963714
+I have watched their prices inflate, portions get smaller and management attitudes grow rapidly!	0	Negative	0.868004
+Wonderful lil tapas and the ambience made me feel all warm and fuzzy inside.	1	Positive	0.935807
+I got to enjoy the seafood salad, with a fabulous vinegrette.	0	Negative	0.536267
+The wontons were thin, not thick and chewy, almost melt in your mouth.	1	Positive	0.953100
+Level 5 spicy was perfect, where spice didn't over-whelm the soup.	1	Positive	0.772424
+We were sat right on time and our server from the get go was FANTASTIC!	0	Negative	0.772284
+Main thing I didn't enjoy is that the crowd is of older crowd, around mid 30s and up.	1	Positive	0.753549
+When I'm on this side of town, this will definitely be a spot I'll hit up again!	1	Positive	0.939336
+I had to wait over 30 minutes to get my drink and longer to get 2 arepas.	0	Negative	0.985916
+This is a GREAT place to eat!	1	Positive	0.987762
+The jalapeno bacon is soooo good.	1	Positive	0.944179
+The service was poor and thats being nice.	1	Positive	0.719111
+Food was good, service was good, Prices were good.	1	Positive	0.961742
+The place was not clean and the food oh so stale!	1	Positive	0.520565
+The chicken dishes are OK, the beef is like shoe leather.	0	Negative	0.523685
+But the service was beyond bad.	0	Negative	0.935671
+I'm so happy to be here!!!"	1	Positive	0.935499
+Tasted like dirt.	0	Negative	0.684638
+One of the few places in Phoenix that I would definately go back to again .	1	Positive	0.508512
+The block was amazing.	1	Positive	0.614163
+It's close to my house, it's low-key, non-fancy, affordable prices, good food.	1	Positive	0.980166
+* Both the Hot & Sour & the Egg Flower Soups were absolutely 5 Stars!	0	Negative	0.853430
+My sashimi was poor quality being soggy and tasteless.	0	Negative	0.998886
+Great time - family dinner on a Sunday night.	1	Positive	0.997588
+the food is not tasty at all, not to say its "real traditional Hunan style".	0	Negative	0.876254
+What did bother me, was the slow service.	0	Negative	0.914257
+The flair bartenders are absolutely amazing!	1	Positive	0.986981
+Their frozen margaritas are WAY too sugary for my taste.	0	Negative	0.944092
+These were so good we ordered them twice.	1	Positive	0.888041
+So in a nutshell: 1) The restaraunt smells like a combination of a dirty fish market and a sewer.	0	Negative	0.628396
+My girlfriend's veal was very bad.	0	Negative	0.954322
+Unfortunately, it was not good.	0	Negative	0.677086
+I had a pretty satifying experience.	1	Positive	0.670675
+Join the club and get awesome offers via email.	1	Positive	0.550547
+Perfect for someone (me) who only likes beer ice cold, or in this case, even colder.	1	Positive	0.747579
+Bland and flavorless is a good way of describing the barely tepid meat.	0	Negative	0.989764
+The chains, which I'm no fan of, beat this place easily.	1	Positive	0.604908
+The nachos are a MUST HAVE	1	Positive	0.531421

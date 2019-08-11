@@ -162,18 +162,30 @@ def train_model(tr_file, model_name):
     
     print(time()+'All done. You can use "python foodrw -m %s -q <review>" option to classify reviews now.' % model_name)
 
-
-def make_prediction(q_text, model_name):
-    # Load model
+def load_model(model_name):
     m_file, w_file = get_md_files(model_name)
     all_words = []
+    
     with open(w_file, 'r') as wd_reader:
         for line in wd_reader:
             line = line[:-1]
             all_words.append(line)
+    
     with open(m_file, 'rb') as md_reader:
         model = pickle.load(md_reader)
+
+    return all_words, model
+
+def pred_text(q_text, model_name):
+    # Load model
+    all_words, model = load_model(model_name)
     
+    # Classify
+    make_prediction(q_text, all_words, model)
+    
+    
+
+def make_prediction(q_text, all_words, model):
     # Classify
     prob_dist = model.prob_classify(rw_to_vec(q_text, all_words))
     target = prob_dist.max()
@@ -182,3 +194,28 @@ def make_prediction(q_text, model_name):
     # Show result
     print('\nThis review is classified as **%s**, with probability %f.' % (tg_dict[target], probability))
     
+    return target, probability
+    
+def pred_file(f_name, model_name, f_dest):
+    # Load model
+    all_words, model = load_model(model_name)
+
+    # Load file
+    rws = []
+    with open(f_name, 'r') as f_reader:
+        for line in f_reader:
+            rws.append(line[:-1])
+    
+    # Classify
+    results = []
+    for rw in rws:
+        if len(rw) > 0:
+            target, prob = make_prediction(rw, all_words, model)
+            results.append([rw, target, tg_dict[target], prob])
+    
+    # Write to file
+    with open(f_dest, 'w') as f_writer:
+        f_writer.write('review\ttarget\ttarget desc\tprobability')
+        for row in results:
+            f_writer.write('%s\t%d\t%s\t%f\n' % (row[0],row[1],row[2],row[3]))
+            
