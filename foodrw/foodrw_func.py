@@ -55,6 +55,7 @@ tg_dict = {
 def get_md_files(model_name):
     return '.\\model\\'+model_name+'.classifier', '.\\model\\'+model_name+'.words'
 
+
 def parse_review(r):
         bow = []
         # remove punctuations
@@ -76,6 +77,7 @@ def parse_review(r):
                     word = lemmatizer.lemmatize(word)
                 bow.append(word)
         return bow
+
 
 def rw_to_vec(r, all_words):
         bow = parse_review(r)
@@ -162,6 +164,7 @@ def train_model(tr_file, model_name):
     
     print(time()+'All done. You can use "python foodrw -m %s -q <review>" option to classify reviews now.' % model_name)
 
+
 def load_model(model_name):
     m_file, w_file = get_md_files(model_name)
     all_words = []
@@ -176,14 +179,6 @@ def load_model(model_name):
 
     return all_words, model
 
-def pred_text(q_text, model_name):
-    # Load model
-    all_words, model = load_model(model_name)
-    
-    # Classify
-    make_prediction(q_text, all_words, model)
-    
-    
 
 def make_prediction(q_text, all_words, model):
     # Classify
@@ -195,6 +190,15 @@ def make_prediction(q_text, all_words, model):
     print('\nThis review is classified as **%s**, with probability %f.' % (tg_dict[target], probability))
     
     return target, probability
+
+
+def pred_text(q_text, model_name):
+    # Load model
+    all_words, model = load_model(model_name)
+    
+    # Classify
+    make_prediction(q_text, all_words, model)
+
     
 def pred_file(f_name, model_name, f_dest):
     # Load model
@@ -218,4 +222,3 @@ def pred_file(f_name, model_name, f_dest):
         f_writer.write('review\ttarget\ttarget desc\tprobability')
         for row in results:
             f_writer.write('%s\t%d\t%s\t%f\n' % (row[0],row[1],row[2],row[3]))
-            
