@@ -54,13 +54,13 @@ $ foodrw -f "data\test.txt" -m test_model -d "data\my_classified.txt"
 
 # Methodology
 
-1. Remove punctuation
+1. **Remove punctuation**
 
 E.g.
 
 `Wow... Loved this place.` -> `Wow Loved this place`
 
-2. Tokenisation
+2. **Tokenisation**
 
 Separate words and put them into an array/list
 
@@ -68,7 +68,7 @@ E.g.
 
 `Wow Loved this place` -> `['Wow', 'Loved', 'this', 'place']`
 
-3. Remove stop words
+3. **Remove stop words**
 
 Stop words are those used very commonly and meaningless, such as "the", "a", "this" and "that".
 
@@ -76,7 +76,7 @@ E.g.
 
 `['Wow', 'Loved', 'this', 'place']` -> `['Wow', 'Loved', 'place']`
 
-4. POS (part of speech) labelling & filtering
+4. **POS (part of speech) labelling & filtering**
 
 POS indicates the category to which a word is assigned in accordance with its syntactic functions
 
@@ -84,7 +84,7 @@ E.g.
 
 `['Wow', 'Loved', 'place']` -> `[('Wow', 'NNP'), ('Loved', 'VBD'), ('place', 'NN')]`
 
-5. Words lemmatization
+5. **Words lemmatization**
 
 Recover word into its original form, such as plural to single or past tense to present tense
 
@@ -92,7 +92,7 @@ E.g.
 
 `[('Wow', 'NNP'), ('Loved', 'VBD'), ('place', 'NN')]` -> `[('wow', 'NNP'), ('love', 'VBD'), ('place', 'NN')]`
 
-6. Bag of words & review vectors generating
+6. **Bag of words & review vectors generating**
 
 All the words from all reviews are collected into a list with their occurrence frequencies. These words are filtered based on their frequencies. That is, words are reserved only if they occurred frequently. Finally, a feature (every words) vector is generated.
 
@@ -114,7 +114,7 @@ Therefore, each review is converted into a feature vector. For example, the revi
 }
 ```
 
-7. Training (Naive Bayes)
+7. **Training (Naive Bayes)**
 
 Naive Bayes Classifier Algorithm is a family of probabilistic algorithms based on applying Bayes’ theorem with the “naive” assumption of conditional independence between every pair of a feature.
 
@@ -122,13 +122,13 @@ We classify whether the review `Wow... Loved this place.` is a positive review o
 
 We then have to calculate:
 
-P(positive | wow love place) — the probability that the tag of a sentence is positive given that the sentence is `Wow... Loved this place.`.
+P(positive | wow love place) — the probability that the tag of a sentence is positive given that the sentence is `Wow... Loved this place.`
 
-P(negative | wow love place) — the probability that the tag of a sentence is negative given that the sentence is `Wow... Loved this place.`.
+P(negative | wow love place) — the probability that the tag of a sentence is negative given that the sentence is `Wow... Loved this place.`
 
 **_TODO: More algorithms such as logistic regression can be added._**
 
-8. Relevance score
+8. **Relevance score**
 
 Because we are using Naive Bayes, the probability of the classification can be simply used as its "relevance score".
 
