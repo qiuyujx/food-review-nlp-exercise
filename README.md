@@ -60,7 +60,7 @@ E.g.
 
 `Wow... Loved this place.` -> `Wow Loved this place`
 
-1. Tokenisation
+2. Tokenisation
 
 Separate words and put them into an array/list
 
@@ -68,7 +68,7 @@ E.g.
 
 `Wow Loved this place` -> `['Wow', 'Loved', 'this', 'place']`
 
-1. Remove stop words
+3. Remove stop words
 
 Stop words are those used very commonly and meaningless, such as "the", "a", "this" and "that".
 
@@ -76,7 +76,7 @@ E.g.
 
 `['Wow', 'Loved', 'this', 'place']` -> `['Wow', 'Loved', 'place']`
 
-1. POS (part of speech) labelling & filtering
+4. POS (part of speech) labelling & filtering
 
 POS indicates the category to which a word is assigned in accordance with its syntactic functions
 
@@ -114,7 +114,7 @@ Therefore, each review is converted into a feature vector. For example, the revi
 }
 ```
 
-1. Training (Naive Bayes)
+7. Training (Naive Bayes)
 
 Naive Bayes Classifier Algorithm is a family of probabilistic algorithms based on applying Bayes’ theorem with the “naive” assumption of conditional independence between every pair of a feature.
 
@@ -128,7 +128,7 @@ P(negative | wow love place) — the probability that the tag of a sentence is n
 
 **_TODO: More algorithms such as logistic regression can be added._**
 
-1. Relevance score
+8. Relevance score
 
 Because we are using Naive Bayes, the probability of the classification can be simply used as its "relevance score".
 
@@ -143,7 +143,6 @@ In the above output, the probability `0.983745` means this review has 98.37% pro
 # Assumptions and trade-off
 
 Currently we are extracting words with POS noun, verb, adjective and adverb. This is because the training set is tend to be small. To avoid too many "empty" vectors, which means that no word can be found in the feature list, I involved all of these POS. However, when we have a relatively larger training set, we may only need to consider adjectives and adverbs which potentially make more sense in expressing positive/negative sentiments.
-
 
 # Future Works
 
