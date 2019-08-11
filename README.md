@@ -5,6 +5,10 @@ This is an exercise for sentiment analysis based on python-nltk.
 
 # Installation
 
+** Requirements: Python >= v3.6
+
+Install `foodrw` cli tool:
+
 ```
 $ python setup.py install
 ```
