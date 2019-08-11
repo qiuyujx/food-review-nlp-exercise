@@ -21,6 +21,8 @@ $ python setup.py install
 
 # Features
 
+You can always run `foodrw --help` to see all the avilable options.
+
 ## Train a model from a TSV file
 
 This will train a model with default name "default_model".
