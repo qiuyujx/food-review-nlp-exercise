@@ -2,7 +2,12 @@
 
 import re
 import os
+import sys
 from setuptools import setup
+
+# Check python version
+if sys.version_info < (3,6):
+    sys.exit('Sorry, Python < 3.6 is not supported')
 
 # Get version
 version = re.search(
