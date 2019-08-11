@@ -7,6 +7,12 @@ This is an exercise for sentiment analysis based on python-nltk.
 
 ** Requirements: Python >= v3.6
 
+Check this repo
+
+```
+git clone https://github.com/qiuyujx/food-review-nlp-exercise.git
+```
+
 Install `foodrw` cli tool:
 
 ```
